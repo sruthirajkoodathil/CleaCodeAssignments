@@ -1,28 +1,27 @@
-bool HeartRateOk(float bpm) {
+void HeartRateOk(float bpm) {
   if(bpm < 70 || bpm > 150) {
-    return false;
+    bpmOK =false;
   } 
-  return true;
+  bpmOK = true;
 }
-bool Spo2Ok(float spo2) {
+void Spo2Ok(float spo2) {
   if(spo2 < 80) {
-    return false;
+    spo2OK = false;
   } 
-  return true;
+  spo2OK = true;
 }
 
-bool RespRateOk(float respRate) {
+void RespRateOk(float respRate) {
   if(respRate < 30 || respRate > 60) {
-    return false;
+    resOK = false;
   }
-  return true;
+  resOK = true;
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  bool bpmOK, spo2OK, resOK;
-  bpmOK = HeartRateOk(bpm); 
-  spo2OK = Spo2Ok(spo2); 
-  resOK =  RespRateOk(respRate);
+  HeartRateOk(bpm); 
+  Spo2Ok(spo2); 
+  RespRateOk(respRate);
   if (bpmOK && spo2OK && resOK)
   {
     return true;
