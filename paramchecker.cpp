@@ -15,7 +15,7 @@ bool RespRateOk(float respRate) {
   if(respRate < 30 || respRate > 60) {
     return false;
   }
-  retun true;
+  return true;
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
