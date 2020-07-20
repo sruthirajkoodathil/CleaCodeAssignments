@@ -22,7 +22,7 @@ bool vitalsAreOk(float bpm, float spo2, float respRate) {
   bool bpmOK, spo2OK, resOK;
   bpmOK = HeartRateOk(bpm); 
   spo2OK = Spo2Ok(spo2); 
-  resOK =  RespRateOk(respRate)
+  resOK =  RespRateOk(respRate);
   if (bpmOK && spo2OK && resOK)
   {
     return true;
