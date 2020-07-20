@@ -1,3 +1,4 @@
+#include "paramchecker.h"
 void HeartRateOk(float bpm) {
   if(bpm < 70 || bpm > 150) {
     bpmOK =false;
