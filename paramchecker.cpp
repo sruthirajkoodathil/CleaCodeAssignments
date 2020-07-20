@@ -1,28 +1,27 @@
-#include "paramchecker.h"
-void HeartRateOk(float bpm) {
+bool HeartRateOk(float bpm) {
   if(bpm < 70 || bpm > 150) {
-    bpmOK =false;
+    return false;
   } 
-  bpmOK = true;
+    return true;
 }
-void Spo2Ok(float spo2) {
+bool Spo2Ok(float spo2) {
   if(spo2 < 80) {
-    spo2OK = false;
+    return false;
   } 
-  spo2OK = true;
+  return true;
 }
 
-void RespRateOk(float respRate) {
+bool RespRateOk(float respRate) {
   if(respRate < 30 || respRate > 60) {
-    resOK = false;
+    return false;
   }
-  resOK = true;
+  retun true;
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  HeartRateOk(bpm); 
-  Spo2Ok(spo2); 
-  RespRateOk(respRate);
+  bpmOK = HeartRateOk(bpm); 
+  spo2OK = Spo2Ok(spo2); 
+  resOK = RespRateOk(respRate);
   if (bpmOK && spo2OK && resOK)
   {
     return true;
