@@ -1,4 +1,4 @@
-bool ParamLimitOk(float param1,float Lowlimit, float HighLimit)
+bool ParamLimitOk(float param1,float Lowlimit, float HighLimit);
 
 bool ParamLimitOk(float param1,float Lowlimit, float HighLimit)
 {
