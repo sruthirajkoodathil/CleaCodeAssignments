@@ -8,9 +8,9 @@ bool ParamLimitOk(float param1,float Lowlimit, float HighLimit)
   return true;
 }
 
-bool vitalsAreOk(float* Param, uint ParamCount) {
-  uint i = 0;
-  static uint count = 0; 
+bool vitalsAreOk(float* Param, int ParamCount) {
+  int i = 0;
+  static int count = 0; 
   static bool ret;
   
   for (i=0 ; (count <= ParamCount) && (ret); )
