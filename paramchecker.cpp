@@ -1,6 +1,6 @@
 bool LimitCheck(float param1,float Lowlimit, float HighLimit)
 {
-  if (param1 < Lowlimit) || (param1 > HighLimit){
+  if ((param1 < Lowlimit) || (param1 > HighLimit)){
     return false;
   }
   return true;
