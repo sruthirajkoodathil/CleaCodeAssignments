@@ -1,4 +1,6 @@
-bool LimitCheck(float param1,float Lowlimit, float HighLimit)
+bool ParamLimitOk(float param1,float Lowlimit, float HighLimit)
+
+bool ParamLimitOk(float param1,float Lowlimit, float HighLimit)
 {
   if ((param1 < Lowlimit) || (param1 > HighLimit)){
     return false;
@@ -6,12 +8,17 @@ bool LimitCheck(float param1,float Lowlimit, float HighLimit)
   return true;
 }
 
-bool vitalsAreOk(float bpm, float spo2, float respRate) {
+bool vitalsAreOk(float* Param, uint ParamCount) {
+  uint i = 0;
+  static uint count = 0; 
+  static bool ret;
   
-  if (LimitCheck(bpm,70,150) && LimitCheck(spo2,70,100) && LimitCheck(respRate,30,60)){
-    return true;
-  }  
-     return false;
+  for (i=0 ; (count <= ParamCount) && (ret); )
+  {
+   ret = ParamLimitOk(Param[i++],Param[i++],Param[i++]);
+   count++;
+  }
+  return ret;
 }
 
 
