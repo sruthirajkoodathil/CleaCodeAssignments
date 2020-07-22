@@ -2,11 +2,11 @@
 #include <gtest/gtest.h>
 
 struct Param Vitals_1_valid[1]={
-{60, 50, 100},
+{60, 50, 100}
 };
 
 struct Param Vitals_1_Notvalid[1]={
-{101, 50, 100},
+{101, 50, 100}
 };
 
 struct Param Vitals_3_valid[3]={
