@@ -1,12 +1,12 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
  
-param Vitals_3_valid[]{
+param Vitals_3_valid[]={
 {100, 50, 100},
 {80,40,100},
 {80,40,100},
 }
-param Vitals_4_Novalid[]{
+param Vitals_4_Novalid[]={
 {40, 50, 100},
 {150,40,100},
 {20,40,100},
