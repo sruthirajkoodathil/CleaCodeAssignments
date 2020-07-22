@@ -1,1 +1,1 @@
-bool vitalsAreOk(struct Param* Vitals[],int TotalVitals);
+bool vitalsAreOk(struct Param* Vitals,int TotalVitals);
