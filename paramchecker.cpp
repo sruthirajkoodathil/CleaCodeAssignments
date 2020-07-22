@@ -1,3 +1,5 @@
+#include "paramchecker.h"
+
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit);
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
 {
