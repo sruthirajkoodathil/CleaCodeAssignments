@@ -1,11 +1,4 @@
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit);
-
-struct Param{
-float vital;
-float lowerlimit;
-float upperlimit;
-};
-
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
 {
   if ((param < Lowlimit) || (param > HighLimit)){
