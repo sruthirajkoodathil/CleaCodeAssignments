@@ -4,10 +4,10 @@
 /*struct Param Vitals_1_valid[1]={
 {60, 50, 100}
 };
-
+*/
 struct Param Vitals_1_Notvalid[1]={
 {101, 50, 100}
-};*/
+};
 
 struct Param Vitals_3_valid[3]={
 {100, 50, 100},
@@ -31,10 +31,10 @@ struct Param Vitals_5_valid[5]={
 
 /*TEST(VitalsTest, Vitals_1Valid) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_1_valid,1));
-}
+}*/
 TEST(VitalsTest, Vitals_1Notvalid) { 
     ASSERT_EQ(false, vitalsAreOk(Vitals_1_Notvalid,1));
-}*/
+}
 TEST(VitalsTest, Vitals_3) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_3_valid,3));
 }
