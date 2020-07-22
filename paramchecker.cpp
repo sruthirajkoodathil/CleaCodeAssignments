@@ -13,9 +13,10 @@ bool vitalsAreOk(float* Param, int ParamCount) {
   static int count = 0; 
   static bool ret;
   
-  for (i=0 ; (count <= ParamCount) && (ret);i+3)
+  for (i=0 ; (count <= ParamCount) && (ret);)
   {
    ret = ParamLimitOk(Param[i],Param[i+1],Param[i+2]);
+   i = i+3;
    count++;
   }
   return ret;
