@@ -1,1 +1,1 @@
-bool vitalsAreOk(float* Param, int ParamCount)
+bool vitalsAreOk(float* Param, int ParamCount);
