@@ -14,13 +14,14 @@ bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
   return true;
 }
 
-bool vitalsAreOk(struct Param* Vitals[],int TotalVitals) {
+bool vitalsAreOk(struct Param* Vitals,int TotalVitals) {
   int i = 0;
   static bool status;
   
   for (i=0 ; (i <= TotalVitals) && (status);i++)
   {
-     status = ParamLimitOk(Vitals[i].vital,Vitals[i].lowerlimit,Vitals[i].upperlimit);
+     status = ParamLimitOk(Vitals->vital,Vitals->lowerlimit,Vitals->upperlimit);
+     Vitals++;
   }
   return status;
 }
