@@ -13,7 +13,7 @@ bool vitalsAreOk(struct Param* Vitals,int TotalVitals) {
   int i = 0;
   static bool status = true;
   
-  for (i=0 ; (i <= TotalVitals) && (status);i++)
+  for (i=0 ; (i < TotalVitals) && (status);i++)
   {
      status = ParamLimitOk(Vitals->vital,Vitals->lowerlimit,Vitals->upperlimit);
      Vitals++;
