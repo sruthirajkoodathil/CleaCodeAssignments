@@ -4,13 +4,13 @@
 struct param Vitals_3_valid[3]={
 {100, 50, 100},
 {80,40,100},
-{80,40,100},
+{80,40,100}
 };
 struct param Vitals_4_Novalid[4]={
 {40, 50, 100},
 {150,40,100},
 {20,40,100},
-{101,20,100},
+{101,20,100}
 };
 TEST(VitalsTest, Vitals_3) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_3_valid,3));
