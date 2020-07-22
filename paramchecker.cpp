@@ -22,7 +22,7 @@ bool vitalsAreOk(struct Param* Vitals[],int TotalVitals) {
   {
      status = ParamLimitOk(Vitals[i].vital,Vitals[i].lowerlimit,Vitals[i].upperlimit);
   }
-  return ret;
+  return status;
 }
 
 
