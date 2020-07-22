@@ -1,7 +1,7 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
 
-struct Param Vitals_1_valid[1]={
+/*struct Param Vitals_1_valid[1]={
 {60, 50, 100}
 };
 
@@ -20,7 +20,7 @@ struct Param Vitals_4_Notvalid[4]={
 {20,40,100},
 {101,20,100}
 };
-
+*/
 struct Param Vitals_5_valid[5]={
 {50, 50, 100},
 {60,40,100},
@@ -29,7 +29,7 @@ struct Param Vitals_5_valid[5]={
 {20,20,100}
 };
 
-TEST(VitalsTest, Vitals_1Valid) { 
+/*TEST(VitalsTest, Vitals_1Valid) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_1_valid,1));
 }
 TEST(VitalsTest, Vitals_1Notvalid) { 
@@ -41,7 +41,7 @@ TEST(VitalsTest, Vitals_3) {
  
 TEST(VitalsTest, Vitals_4) {
     ASSERT_EQ(false, vitalsAreOk(Vitals_4_Notvalid, 4));
-}
+}*/
 
 TEST(VitalsTest, Vitals_5Valid) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_5_valid,5));
