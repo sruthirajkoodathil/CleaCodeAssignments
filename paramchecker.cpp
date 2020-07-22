@@ -11,7 +11,7 @@ bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
 
 bool vitalsAreOk(struct Param* Vitals,int TotalVitals) {
   int i = 0;
-  static bool status = true;
+  bool status = true;
   
   for (i=0 ; ((i < TotalVitals) && (status));i++)
   {
