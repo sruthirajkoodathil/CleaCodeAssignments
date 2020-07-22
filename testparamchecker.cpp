@@ -13,7 +13,7 @@ param Vitals_4_Novalid[]{
 {101,20,100},
 }
 TEST(VitalsTest, Vitals_3) { 
-    ASSERT_EQ(true, vitalsAreOk(Vitals_3_valid,3);
+    ASSERT_EQ(true, vitalsAreOk(Vitals_3_valid,3));
 }
  
 TEST(VitalsTest, Vitals_4) {
