@@ -1,9 +1,9 @@
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit);
 
-struct limit{
-float vital[3];
-float lowlimit[3];
-float upperlimit[3];
+struct Param{
+float vital;
+float lowerlimit;
+float upperlimit;
 };
 
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
@@ -14,13 +14,13 @@ bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
   return true;
 }
 
-bool vitalsAreOk(struct limit* Param) {
+bool vitalsAreOk(struct Param* Vitals[],int TotalVitals) {
   int i = 0;
-  bool ret;
+  static bool status;
   
-  for (i=0 ; (i <= 3) && (ret);i++)
+  for (i=0 ; (i <= TotalVitals) && (status);i++)
   {
-     ret = ParamLimitOk(Param.vital[i],Param.lowlimit[i],Param.upperlimit[i]);
+     status = ParamLimitOk(Vitals[i].vital,Vitals[i].lowerlimit,Vitals[i].upperlimit);
   }
   return ret;
 }
