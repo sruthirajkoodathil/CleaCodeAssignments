@@ -1,5 +1,11 @@
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit);
 
+struct limit{
+float vital[3];
+float lowlimit[3];
+float upperlimit[3];
+};
+
 bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
 {
   if ((param < Lowlimit) || (param > HighLimit)){
@@ -8,16 +14,13 @@ bool ParamLimitOk(float param,float Lowlimit, float HighLimit)
   return true;
 }
 
-bool vitalsAreOk(float* Param, int ParamCount) {
+bool vitalsAreOk(struct limit* Param) {
   int i = 0;
-  static int count = 0; 
-  static bool ret;
+  bool ret;
   
-  for (i=0 ; (count <= ParamCount) && (ret);)
+  for (i=0 ; (i <= 3) && (ret);i++)
   {
-   ret = ParamLimitOk(Param[i],Param[i+1],Param[i+2]);
-   i = i+3;
-   count++;
+     ret = ParamLimitOk(Param.vital[i],Param.lowlimit[i],Param.upperlimit[i]);
   }
   return ret;
 }
