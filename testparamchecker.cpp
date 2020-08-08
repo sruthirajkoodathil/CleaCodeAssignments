@@ -1,7 +1,7 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
 
-struct Param Vitals_1_valid[1]={
+/*struct Param Vitals_1_valid[1]={
 {60, 50, 100}
 };
 
@@ -47,7 +47,7 @@ TEST(VitalsTest, Vitals_4) {
 
 TEST(VitalsTest, Vitals_5Valid) { 
     ASSERT_EQ(true, vitalsAreOk(Vitals_5_valid,5));
-}
+}*/
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
